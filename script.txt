@@ -1,0 +1,28 @@
+(function() {
+  const ANSWER_INDEX = 4; // index 4 = pilihan ke-5 = Sangat Baik/Sangat Tinggi/Selalu
+  const SARAN = "Dosen mengajar dengan baik";
+ 
+  const groups = {};
+  document.querySelectorAll('input[type="radio"]').forEach(r => {
+    if (!groups[r.name]) groups[r.name] = [];
+    groups[r.name].push(r);
+  });
+ 
+  let filled = 0;
+  Object.values(groups).forEach(opts => {
+    if (opts[ANSWER_INDEX]) {
+      opts[ANSWER_INDEX].click();
+      filled++;
+    }
+  });
+ 
+  const ta = document.querySelector('textarea');
+  if (ta) {
+    ta.value = SARAN;
+    ta.dispatchEvent(new Event('input', { bubbles: true }));
+    ta.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+ 
+  console.log('Berhasil mengisi ' + filled + '/28 pertanyaan dengan Sangat Baik/Sangat Tinggi/Selalu');
+  console.log('Saran diisi: ' + SARAN);
+})();
