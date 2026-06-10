@@ -6,7 +6,7 @@ Script untuk mengisi kuesioner dosen di SIAM UB secara otomatis lewat console br
  
 1. Buka halaman kuesioner di `siam.ub.ac.id/mahasiswa/kuisioner`
 2. Tekan `F12` → tab **Console**
-3. Copy isi `autofill_kuesioner_ub.txt` → paste → **Enter**
+3. Copy isi `script.txt` → paste → **Enter**
 ## Konfigurasi
  
 ```js
