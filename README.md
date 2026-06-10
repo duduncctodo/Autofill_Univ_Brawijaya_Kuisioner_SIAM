@@ -11,6 +11,6 @@ Script untuk mengisi kuesioner dosen di SIAM UB secara otomatis lewat console br
  
 ```js
 const ANSWER_INDEX = 4; // 0 = Sangat Tidak Baik, 4 = Sangat Baik
-const SARAN = "Dosen mengajar dengan baik";
+const SARAN = "Dosen mengajar dengan baik"; // Text ini bisa dirubah.
 ```
  
